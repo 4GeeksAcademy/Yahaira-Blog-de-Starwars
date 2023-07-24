@@ -1,5 +1,8 @@
 import React from "react";
 
-const Planets = ()=>{
-    
+export const Planets = ()=>{
+    return(
+  <h1>Planest</h1>
+    );
 }
+
