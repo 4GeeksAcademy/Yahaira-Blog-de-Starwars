@@ -11,7 +11,7 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import {Planets} from "./component/Planets";
+import { Planets } from "./component/Planets";
 import { Characters } from "./component/Characters";
 
 
@@ -26,24 +26,19 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 
-					<Row>
-						<Col>
-							<Navbar />
-						</Col>
-					</Row>
 
-					<Row>
-						<Col>
-							<Routes>
-								<Route path="/" element={<Home />} />
-								<Route path="/character" element={<Characters />} />   
-								<Route path="/planets" element={<Planets />} /> 
+					<Navbar />
 
-								<Route path="/characters/:theid" element={<Single />} />
-								<Route path="*" element={<h1>Not found!</h1>} />
-							</Routes>
-						</Col>
-					</Row>
+
+
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/character" element={<Characters />} />
+						<Route path="/planets" element={<Planets />} />
+
+						<Route path="/characters/:theid" element={<Single />} />
+						<Route path="*" element={<h1>Not found!</h1>} />
+					</Routes>
 
 
 					<Footer />
