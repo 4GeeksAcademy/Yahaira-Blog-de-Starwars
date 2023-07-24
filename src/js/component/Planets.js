@@ -6,3 +6,4 @@ export const Planets = ()=>{
     );
 }
 
+export default Planets;
