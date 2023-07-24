@@ -14,6 +14,7 @@ import { Footer } from "./component/footer";
 import {Planets} from "./component/Planets.js";
 import { Characters } from "./component/Characters.js";
 
+
 //create your first component/
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -35,8 +36,8 @@ const Layout = () => {
 						<Col>
 							<Routes>
 								<Route path="/" element={<Home />} />
-								<Route path="/demo" element={<Demo />} />   
-								<Route path="/planets2" element={<Planets />} /> 
+								<Route path="/character" element={<Character />} />   
+								<Route path="/planets" element={<Planets />} /> 
 
 								<Route path="/characters/:theid" element={<Single />} />
 								<Route path="*" element={<h1>Not found!</h1>} />
