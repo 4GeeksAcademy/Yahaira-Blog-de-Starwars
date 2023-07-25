@@ -1,16 +1,16 @@
-//import react into the bundle
-import React from 'react'
-import {createRoot} from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Layout from './layout';
+import './styles/Index.css'
 
-//include your index.scss file into the bundle
-import "../styles/index.css";
 
-//import your own components
-import Layout from './layout.js'
 
-//
-const root = createRoot(document.querySelector("#app"))
-
-//render your react application
-root.render(<Layout/>)
-
+ReactDOM.render(
+  <React.StrictMode>
+    <div className="stars"></div>
+    <div className="stars2"></div>
+    <div className="stars3"></div>
+    <Layout />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
