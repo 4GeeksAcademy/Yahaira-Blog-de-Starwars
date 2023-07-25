@@ -2,20 +2,23 @@ import React from "react";
 //import { useState } from "react";
 //import { Link } from "react-router-dom";
 
-const Characters = ({name, gender, eye_color, hair_color, index, store}) => {
+const Characters = ({ name, gender, eye_color, hair_color, index, store }) => {
+  
     return (
         <h1>Characters</h1>
+    );
+
         /*
         const [button, setButton] = useState("btn-outline-starwars-2");
-	const [icon, setIcon] = useState("regular")
+    const [icon, setIcon] = useState("regular")
 
   const getFavoriteEntity = (name, e) => {
     store.addFavoriteEntity(name);
   };
 
   const changeToActive = (buttonE, iconE) =>{
-		setButton(buttonE)
-		setIcon(iconE)
+        setButton(buttonE)
+        setIcon(iconE)
   }
 
 
@@ -60,8 +63,8 @@ const Characters = ({name, gender, eye_color, hair_color, index, store}) => {
           </div>
         </div>
       </>
-         */
-    );
+
+    );*/
 }
 
 export default Characters;
