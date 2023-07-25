@@ -1,47 +1,33 @@
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ScrollToTop from "./component/scrollToTop";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ScrollToTop from './components/scrollToTop'
+import injectContext from './store/appContext';
+import './styles/details.css'
 
-import { Container, Row, Col } from "react-bootstrap";
+// Views
+import DebugMenu from './views/DebugMenu';
+import CDetails from './views/Character-details';
+import PDetails from './views/Planet-details';
+import VDetails from './views/Vehicle-details';
+import Home from './views/Home';
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
-import injectContext from "./store/appContext";
-
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
-import { Planets } from "./component/Planets";
-import { Characters } from "./component/Characters";
-
-
-//create your first component/
+//create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
-	const basename = process.env.BASENAME || "";
+	const basename = process.env.BASENAME || '';
 
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-
-
-					<Navbar />
-
-
-
 					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/character" element={<Characters />} />
-						<Route path="/planets" element={<Planets />} />
-
-						<Route path="/characters/:theid" element={<Single />} />
-						<Route path="*" element={<h1>Not found!</h1>} />
+						<Route exact path="/" element={<Home />}></Route>
+						<Route exact path="/Home" element={<Home />}></Route>
+						<Route exact path="/character-details/:entityId" element={<CDetails />}></Route>
+						<Route exact path="/planet-details/:entityId" element={<PDetails />}></Route>
+						<Route exact path="/vehicle-details/:entityId" element={<VDetails />}></Route>
+						<Route exact path="/Debug-menu" element={<DebugMenu />}></Route>
 					</Routes>
-
-
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>
