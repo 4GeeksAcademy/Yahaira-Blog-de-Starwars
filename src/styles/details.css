@@ -1,0 +1,28 @@
+.detail-header{
+    font-size: 4rem;
+}
+
+.detail-description, tr, th, td{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.nav-comp{
+    position: relative;
+}
+
+.main-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: hidden;
+}
+
+.main-container > section{
+    position: relative;
+}
+
+table{
+    margin-bottom: 20rem;
+}
