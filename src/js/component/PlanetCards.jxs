@@ -1,19 +1,10 @@
-import React from "react";
-/*
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useStore from "../store/zustand";
 import "../styles/Cards.css";
-*/
 
-export const Planets = ()=>{
-    return(
-  <h1>Planest</h1>
-  
-    );
-
-    /*
-const store = useStore();
+const PlanetCards = () => {
+  const store = useStore();
 
   const [planets, setPlanet] = useState([]);
 
@@ -81,8 +72,6 @@ const store = useStore();
       </div>
     </>
   );
-    
-    */
-}
+};
 
-export default Planets;
+export default PlanetCards;
